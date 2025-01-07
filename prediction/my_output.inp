@@ -1,0 +1,12 @@
+problem rocket equilibrium
+   p(bar) = 69.80000
+   o/f = 2.37124
+   pip = 69.80000
+react  
+   fuel=AL(cr) wt=17.66267  t,k=298.15000 
+   fuel=HTPB wt=12.00001  t,k=298.15000 
+   ox=EMs wt=10.00023  t,k=298.15000 h,kj/mol=980.93000 O 10 C 15 H 7 N 7 
+   ox=NH4CLO4(I) wt=60.33709  t,k=298.15000 
+output trans
+   plot p t isp ivac m mw cp gam o/f cf rho son mach phi h cond pran ae pip
+end

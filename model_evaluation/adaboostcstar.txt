@@ -1,0 +1,4 @@
+best_params is  {'loss': 'exponential', 'n_estimators': 50}
+r2 of train set is 0.841, rmse is 33.269, mae is 26.915, mape is 0.018
+r2 of validation set is 0.824, rmse is 34.982, mae is 27.712, mape is 0.019
+r2 of test set is 0.820, rmse is 34.608, mae is 28.144, mape is 0.019, pe is 0.01924

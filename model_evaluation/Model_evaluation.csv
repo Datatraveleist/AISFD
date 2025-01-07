@@ -1,0 +1,13 @@
+File,Best_Params,Train_R2,Train_RMSE,Train_MAE,Test_R2,Test_RMSE,Test_MAE
+adaboostcstar.txt,"{'loss': 'exponential', 'n_estimators': 50}",0.841,33.269,26.915,0.82,34.608,28.144
+adaboostc_t.txt,"{'loss': 'exponential', 'n_estimators': 50}",0.881,130.127,106.068,0.881,128.73,104.699
+adaboostisp.txt,"{'loss': 'exponential', 'n_estimators': 100}",0.81,5.458,4.412,0.793,5.578,4.469
+knncstar.txt,"{'n_neighbors': 10, 'weights': 'uniform'}",0.988,8.967,6.242,0.889,27.189,17.59
+knnc_t.txt,"{'n_neighbors': 8, 'weights': 'uniform'}",0.987,43.02,29.913,0.938,93.203,60.246
+knnisp.txt,"{'n_neighbors': 8, 'weights': 'uniform'}",0.992,1.102,0.767,0.874,4.358,2.755
+MLPcstar.txt,,0.986,9.681,7.187,0.962,15.944,11.28
+MLPc_t.txt,,0.991,34.012,25.72,0.984,46.747,32.957
+MLPisp.txt,,0.997,0.681,0.491,0.97,2.12,1.41
+rrcstar.txt,{'alpha': 10},0.873,29.795,23.29,0.868,29.572,23.076
+rrc_t.txt,{'alpha': 1},0.725,197.838,165.554,0.718,198.073,165.306
+rrisp.txt,{'alpha': 10},0.82,5.316,4.106,0.81,5.346,4.107

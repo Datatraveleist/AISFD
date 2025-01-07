@@ -1,0 +1,4 @@
+best_params is  {'n_neighbors': 10, 'weights': 'uniform'}
+r2 of train set is 0.988, rmse is 8.967, mae is 6.242, mape is 0.004
+r2 of validation set is 0.872, rmse is 29.935, mae is 19.273, mape is 0.013
+r2 of test set is 0.889, rmse is 27.189, mae is 17.590, mape is 0.012, pe is 0.01203

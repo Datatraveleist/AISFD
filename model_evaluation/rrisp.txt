@@ -1,0 +1,4 @@
+best_params is  {'alpha': 10}
+r2 of train set is 0.820, rmse is 5.316, mae is 4.106, mape is 0.017
+r2 of validation set is 0.806, rmse is 5.485, mae is 4.205, mape is 0.017
+r2 of test set is 0.810, rmse is 5.346, mae is 4.107, mape is 0.017, pe is 0.01678
