@@ -1,13 +1,78 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jul 15 15:48:50 2024
+
+@author: 1
+"""
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jul  8 21:47:14 2024
+
+@author: 1
+"""
 import numpy as np
 import pandas as pd
+import time 
+import random
+from tqdm import tqdm
+from time import sleep
+from sklearn.model_selection import train_test_split
+import pickle
+from math import sqrt
+import pandas as pd
+#import descriptor_generator
+from sklearn import linear_model
+#from sklearn.model_selection import train_test_split
+#from sklearn.model_selection import cross_val_score
+#from sklearn import svm
+import numpy as np
+from sklearn.kernel_ridge import KernelRidge
+from sklearn.model_selection import GridSearchCV
+#from sklearn.model_selection import KFold
+from sklearn.model_selection import train_test_split
+from sklearn.neural_network import MLPRegressor
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.metrics import mean_absolute_error, make_scorer
+from sklearn.metrics import explained_variance_score, mean_squared_error
+from sklearn.metrics import r2_score, mean_absolute_percentage_error#, mean_absolute_percentage_error
+from matplotlib import pyplot as plt
+#from matplotlib import mlab
+# from plot_learning_curve import plot_learning_curve_
+from sklearn.svm import SVR
+from sklearn.ensemble import RandomForestRegressor
+from sklearn import preprocessing
+from sklearn.ensemble import AdaBoostRegressor
+from sklearn.ensemble import GradientBoostingRegressor
+#from sklearn.feature_selection import RFECV
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.model_selection import ShuffleSplit
+import pickle
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import Lasso
+from sklearn.linear_model import Ridge
+from sklearn.preprocessing import StandardScaler
+# import sys
+# sys.path.append('E:/python/Optimization and Design/result_display')
+# from draw import plot
+from sklearn.metrics import r2_score, mean_absolute_percentage_error#, mean_absolute_percentage_error
+from matplotlib import pyplot as plt
+from sklearn.metrics import mean_absolute_error,mean_squared_error
+# from model_evaluate import evaluation_MLP,violin
+from sklearn.preprocessing import StandardScaler,MinMaxScaler
+# unused = ['Eccentricity','nHC','total energy','PMI1','PMI2','PBF','PMI3','NPR1','NPR2']
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+from torch.utils.data import Dataset
+from torch.utils.data import DataLoader
 import torch
 import torch.utils.data as Data
 
 def data_type(data_type):
     data = pd.DataFrame(data_type)
-    # data_ems = [] 
+    data_ems = [] 
     data = data.loc[~((data['isp'] == 0) | (data['cstar'] == 0))]
-    # name = ['nHbondA', 'nHbondD', 'nNH2', 'nAHC', 'nACC', 'nHC', 'nRbond', 'nR', 'nNNO2', 'nONO2', 'nNO2', 'nC(NO2)3', 'nC(NO2)2', 'nC(NO2)', 'nH', 'nC', 'nN', 'nO', 'nOCH3', 'nCH3']
+    name = ['nHbondA', 'nHbondD', 'nNH2', 'nAHC', 'nACC', 'nHC', 'nRbond', 'nR', 'nNNO2', 'nONO2', 'nNO2', 'nC(NO2)3', 'nC(NO2)2', 'nC(NO2)', 'nH', 'nC', 'nN', 'nO', 'nOCH3', 'nCH3']
     # data[name] = data[name].mul(data['EMs'], axis=0)
     Y = data[['c_t','isp','cstar']]
     X = data[['Al','EMs','HTPB','NH4CLO4','C_mol','H_mol','O_mol','N_mol','Al_mol','Cl_mol','wt_H','nHbondA', 'nHbondD', 'nNH2', 'nAHC', 'nACC', 'nHC', 'nRbond', 'nR', 'nNNO2', 'nONO2', 'nNO2', 'nC(NO2)3', 'nC(NO2)2', 'nC(NO2)', 'MinPartialCharge', 'MaxPartialCharge', 'MOLvolume', 'nH', 'nC', 'nN', 'nO', 'PBF', 'TPSA', 'ob', 'total energy', 'molecular weight', 'PMI3', 'nOCH3', 'nCH3', 'Eccentricity', 'PMI2', 'PMI1', 'NPR1', 'NPR2', 'ESTATE_0', 'ESTATE_1', 'ESTATE_2', 'ESTATE_3', 'ESTATE_4', 'ESTATE_5', 'ESTATE_6', 'ESTATE_7', 'ESTATE_8', 'ESTATE_9', 'ESTATE_10', 'ESTATE_11', 'ESTATE_12', 'ESTATE_13', 'ESTATE_14', 'ESTATE_15', 'ESTATE_16', 'ESTATE_17', 'ESTATE_18', 'ESTATE_19', 'ESTATE_20', 'ESTATE_21', 'ESTATE_22', 'ESTATE_23', 'ESTATE_24', 'ESTATE_25', 'ESTATE_26', 'ESTATE_27', 'ESTATE_28', 'ESTATE_29', 'ESTATE_30', 'ESTATE_31', 'ESTATE_32', 'ESTATE_33', 'ESTATE_34', 'ESTATE_35', 'ESTATE_36', 'ESTATE_37', 'ESTATE_38', 'ESTATE_39', 'ESTATE_40', 'ESTATE_41', 'ESTATE_42', 'ESTATE_43', 'ESTATE_44', 'ESTATE_45', 'ESTATE_46', 'ESTATE_47', 'ESTATE_48', 'ESTATE_49', 'ESTATE_50', 'ESTATE_51', 'ESTATE_52', 'ESTATE_53', 'ESTATE_54', 'ESTATE_55', 'ESTATE_56', 'ESTATE_57', 'ESTATE_58', 'ESTATE_59', 'ESTATE_60', 'ESTATE_61', 'ESTATE_62', 'ESTATE_63', 'ESTATE_64', 'ESTATE_65', 'ESTATE_66', 'ESTATE_67', 'ESTATE_68',
