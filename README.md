@@ -31,3 +31,4 @@ d) Introduction of GAs to obtain the optimal contents of Al/ECs/HTPB/AP under ce
 
 In this study, a GUI interface was developed to showcase the integrated machine learning and genetic algorithm framework. This interface can be launched by executing the script located at `\GAS\geatpy_.py`.
 
+# AISFD
