@@ -5,7 +5,7 @@ A novel artificial intelligence (AI) framework that integrates machine learning 
 ## Training and Test Sets
 
 The details of the training and test sets used in this study can be found in the article **Supplementary Data 1.csv**.
-
+https://figshare.com/articles/dataset/Supplementary_Data_1_csv/28714445/1
 - Number of training sets: 398,129
 - Number of test sets: 44,094
 
